@@ -113,7 +113,7 @@
       </Bandage>
     </div>
     <div v-if="server.network_in !== undefined && !compactMode" class="flex items-center gap-2">
-      月流量
+      月流
       <Bandage class="flex items-center">
         <IconDownload class="w-4 h-4" />{{ formatBytes(server.network_in-server.last_network_in, 1) }}
       </Bandage>
@@ -122,7 +122,7 @@
       </Bandage>
     </div>
     <div v-if="server.network_in !== undefined && !compactMode" class="flex items-center gap-2">
-      总流量
+      总流
       <Bandage class="flex items-center">
         <IconDownload class="w-4 h-4" />{{ formatBytes(server.network_in, 1) }}
       </Bandage>
