@@ -1,8 +1,24 @@
 {
   "routes": [
-    {
-      "src": "/json/stats.json",
-      "dest": "https://ssr.rs/json/stats.json"
-    }
+      {
+          "src": "/report",
+          "dest": "http://0.liif.cc:8080/report"
+      },
+      {
+          "src": "/json/stats.json",
+          "dest": "http://0.liif.cc:8080/json/stats.json"
+      },
+      {
+          "src": "/detail",
+          "dest": "http://0.liif.cc:8080/detail"
+      },
+      {
+          "src": "/map",
+          "dest": "http://0.liif.cc:8080/map"
+      },
+      {
+          "src": "/i",
+          "dest": "http://0.liif.cc:8080/i"
+      }
   ]
 }
