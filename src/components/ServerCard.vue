@@ -112,8 +112,14 @@
         <IconUpload class="w-4 h-4" />{{ formatBytes(server.network_tx, 1) }}/s
       </Bandage>
     </div>
+    <div v-if="server.swap_total !== undefined && !compactMode">
+      SWAP
+      <Bandage>
+        {{ formatBytes(server.swap_used * 1024) }} / {{ formatBytes(server.swap_total * 1024) }}
+      </Bandage>
+    </div>
     <div v-if="server.network_in !== undefined && !compactMode" class="flex items-center gap-2">
-      月流
+      月流量
       <Bandage class="flex items-center">
         <IconDownload class="w-4 h-4" />{{ formatBytes(server.network_in-server.last_network_in, 1) }}
       </Bandage>
@@ -122,18 +128,12 @@
       </Bandage>
     </div>
     <div v-if="server.network_in !== undefined && !compactMode" class="flex items-center gap-2">
-      总流
+      总流量
       <Bandage class="flex items-center">
         <IconDownload class="w-4 h-4" />{{ formatBytes(server.network_in, 1) }}
       </Bandage>
       <Bandage class="flex items-center">
         <IconUpload class="w-4 h-4" />{{ formatBytes(server.network_out, 1) }}
-      </Bandage>
-    </div>
-    <div v-if="server.swap_total !== undefined && !compactMode">
-      SWAP
-      <Bandage>
-        {{ formatBytes(server.swap_used * 1024) }} / {{ formatBytes(server.swap_total * 1024) }}
       </Bandage>
     </div>
     <div
