@@ -113,7 +113,7 @@
       </Bandage>
     </div>
     <div v-if="server.swap_total !== undefined && !compactMode">
-      SWAP
+      交换
       <Bandage>
         {{ formatBytes(server.swap_used * 1024) }} / {{ formatBytes(server.swap_total * 1024) }}
       </Bandage>
